@@ -1,0 +1,62 @@
+<head>
+    <!-- 5.3: Google Font Integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* 5.4: :root variables for colors and spacing */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --text-color: #333333;
+            --card-bg: #ffffff;
+            --spacing-unit: 20px;
+        }
+
+        /* 5.2: Selector Type 1 - Universal Selector (*) */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 5.3: Set fonts, colours, font size, and line-height */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-size: 16px;
+            line-height: 1.6;
+            padding: var(--spacing-unit);
+        }
+
+        /* 5.2: Selector Type 2 - Element Selector (h1) */
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: calc(var(--spacing-unit) / 2);
+        }
+
+        /* 5.2: Selector Type 3 - ID Selector (#hero) */
+        #hero {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: calc(var(--spacing-unit) * 2);
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: var(--spacing-unit);
+        }
+
+        /* 5.2: Selector Type 4 - Class Selector (.card) */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid #ddd;
+            padding: var(--spacing-unit);
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: var(--spacing-unit);
+        }
+    </style>
+</head>
