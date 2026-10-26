@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 4.4: Meta tags and favicon -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tech Club Event and Registration Portal">
+    <title>Tech Club - Home</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+    <!-- Header & Navigation Menu (4.5: Shared across all 4 pages) -->
+    <header>
+        <h1>Welcome to Tech Club</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section / Introduction -->
+        <section>
+            <h2>Upcoming Tech Events</h2>
+            <p>Join our upcoming workshops and coding sessions to level up your technical skills!</p>
+        </section>
+
+        <!-- 4.3: Events Table with thead, tbody, and tfoot -->
+        <section>
+            <h2>Event Schedule</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML & CSS Bootcamp</td>
+                        <td>2026-11-26</td>
+                        <td>Lab 101</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript Hackathon</td>
+                        <td>2026-11-12</td>
+                        <td>Auditorium</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total Events Scheduled: 2</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- 4.1 & 4.2: Registration Form with all required elements -->
+        <section>
+            <h2>Tech Club Registration</h2>
+            <form action="#" method="POST">
+                <!-- 4.1: Name, Email, Password with Labels -->
+                <div>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <!-- 4.2: Date, Phone, Radio, Checkbox, Select, Textarea, Submit -->
+                <div>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div>
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+
+                <div>
+                    <label>Interests:</label>
+                    <input type="checkbox" id="webdev" name="interests" value="webdev">
+                    <label for="webdev">Web Development</label>
+                    <input type="checkbox" id="ai" name="interests" value="ai">
+                    <label for="ai">Artificial Intelligence</label>
+                </div>
+
+                <div>
+                    <label for="club-role">Select Role:</label>
+                    <select id="club-role" name="club_role">
+                        <option value="member">General Member</option>
+                        <option value="lead">Project Lead</option>
+                        <option value="volunteer">Volunteer</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="message">Why do you want to join?</label>
+                    <textarea id="message" name="message" rows="4" cols="30"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">Submit Registration</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tech Club. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
