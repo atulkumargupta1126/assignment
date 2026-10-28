@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSS Grid</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body { font-family: Arial; margin: 0; background: #eee; }
+
+.layout {
+    display: grid;
+    grid-template-areas: "head head" "side main" "foot foot";
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+    padding: 15px;
+}
+
+.head { grid-area: head; background: navy; color: white; }
+.side { grid-area: side; }
+.main { grid-area: main; background: white; }
+.foot { grid-area: foot; background: navy; color: white; }
+
+.box { padding: 15px; border-radius: 8px; }
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background: lightblue;
+    border-radius: 8px;
+}
+
+@media(max-width: 600px) {
+    .layout {
+        grid-template-areas: "head" "side" "main" "foot";
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="layout">
+    <header class="box head"><h2>My Website</h2></header>
+
+    <aside class="box side">Sidebar</aside>
+
+    <main class="box main">
+        <h3>CSS Grid Project</h3>
+        <div class="cards">
+            <div class="card">💻 Coding</div>
+            <div class="card">🎨 Design</div>
+            <div class="card">📱 Mobile</div>
+            <div class="card">🌐 Web</div>
+        </div>
+    </main>
+
+    <footer class="box foot">My Website © 2026</footer>
+</div>
+</body>
+</html>
