@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Cards</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 15px;
+    background: #172554;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 25px;
+}
+
+.card {
+    width: 300px;
+    padding: 20px;
+    margin: 5px;
+    border: 2px solid #60a5fa;
+    border-radius: 15px;
+    text-align: center;
+    background: #eff6ff;
+}
+
+.purple {
+    background: #faf5ff;
+    border-color: #c084fc;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+}
+
+.purple .avatar { background: #9333ea; }
+
+.bio {
+    height: 80px;
+    overflow: auto;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #aaa;
+    background: white;
+}
+
+button {
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+}
+
+.purple button { background: #9333ea; }
+
+.add {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 20;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 25px;
+    background: #0f766e;
+}
+</style>
+</head>
+
+<body>
+<header><h2>My Profile Cards</h2></header>
+
+<main class="container">
+    <article class="card">
+        <div class="avatar">A</div>
+        <h3>Atul Kumar Gupta</h3>
+        <p>B.Tech Student</p>
+        <div class="bio">
+            I am learning HTML, CSS and web development.
+            I enjoy creating websites and practising coding.
+        </div>
+        <button>View Profile</button>
+    </article>
+
+    <article class="card purple">
+        <div class="avatar">V</div>
+        <h3>Virat Gupta</h3>
+        <p>Web Developer</p>
+        <div class="bio">
+            I enjoy designing attractive websites using
+            HTML and CSS and learning new technologies.
+        </div>
+        <button>View Profile</button>
+    </article>
+</main>
+
+<button class="add" aria-label="Add profile">+</button>
+</body>
+</html>
