@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Landing Page</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: #172554;
+    color: white;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+a { color: white; text-decoration: none; }
+
+button {
+    padding: 10px;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Centered Banner */
+.banner {
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #2563eb;
+    color: white;
+}
+
+/* Responsive Cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 25px;
+}
+
+.card {
+    flex: 1 1 200px;
+    padding: 20px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .navbar { flex-wrap: wrap; gap: 12px; }
+    .links { flex-wrap: wrap; }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <h2>FlexSite</h2>
+    <div class="links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <button onclick="location.href='#services'">Start</button>
+    </div>
+</nav>
+
+<section class="banner" id="home">
+    <h1>Welcome to FlexSite</h1>
+    <p>Learn and Build Amazing Websites</p>
+    <button onclick="location.href='#services'">Explore</button>
+</section>
+
+<section class="cards" id="services">
+    <div class="card">
+        <h3>Web Design</h3>
+        <p>Create beautiful websites.</p>
+    </div>
+    <div class="card">
+        <h3>Development</h3>
+        <p>Learn HTML and CSS.</p>
+    </div>
+    <div class="card">
+        <h3>Responsive Design</h3>
+        <p>Works on every screen.</p>
+    </div>
+</section>
+
+</body>
+</html>
